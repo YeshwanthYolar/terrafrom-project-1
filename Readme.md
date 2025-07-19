@@ -11,15 +11,37 @@ We’ll provision:
     target groups - instance-type
     ALB in public subnets
 
-    Terraform-project/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── vpc.tf
-├── alb.tf
-├── asg.tf
-├── igw-nat.tf
-├── launch_template.tf
-├── route_table.tf
-├── terraform.tfvars
-project structure
+
+please create your own terraform.tfvars file by refering to var.tf file in the repository
+
+
+here is the project file structure
+
+terraform-project/
+│
+├── scripts/
+│   └── Frontend.sh
+│
+├── network/
+│   ├── vpc.tf
+│   ├── subnet.tf
+│   ├── igw-nat.tf
+│   └── RT.tf
+│
+├── security/
+│   └── SG.tf
+│
+├── compute/
+│   └── AG-LaunchTemplate.tf
+│
+├── lb/
+│   └── TG-ALB.tf
+│
+├── variables/
+│   ├── var.tf
+│   └── terraform.tfvars
+│
+├── providers.tf
+├── README.md
+├── .gitignore
+
